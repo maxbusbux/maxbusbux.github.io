@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test Site</title>
+	<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+	<style type="text/css">
+		body{
+margin-top: 70px;
+background-color: #333;
+
+}
+.card-block {
+	padding: 10px;
+
+}
+
+
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+	<div class="col-md-6 offset-md-3">
+		<div class=" display text-center">Конвертер Величин
+		<form>
+
+		<div class="form-group">
+			
+		<input type="number" id="kmInput" placeholder="Ввведите километры.." class="form-control form-control-lg">
+	
+		</div>
+		</form>
+		<div id="output">
+		<div class="card alert-warning mb-2">
+		<div class="card-block">
+		<h4>Метры:</h4>
+		<div id="metresOutput">
+		</div>
+		<div class="card alert-primary mb-2">
+		<div class="card-block">
+		<h4>Cантиметры:</h4>
+		<div id="smOutput">
+			<div class="card" alert-sucsess mb-2">
+		<div class="card-block">
+		<h4>Млилиметры :</h4>
+		<div id="milimetresOutput">
+
+		</div>
+		</div>	
+		</div>
+		</div>
+		
+		</div>
+	
+	</div>
+</div>	
+</div>
+<script type="text/javascript">
+	document.getElementById('output').style.visibility='hidden';
+	document.getElementById('kmInput').addEventListener('input',function(e){
+		document.getElementById('output').style.visibility='visible';
+		var  km = e.target.value;
+		console.log(km);
+		document.getElementById('metresOutput').innerHTML=km * 1000;
+			document.getElementById('smOutput').innerHTML=km * 100000;
+				document.getElementById('milimetresOutput').innerHTML=km * 1000000;
+
+
+	});
+</script>
+</body>
+</html>
