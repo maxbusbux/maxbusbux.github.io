@@ -1,3 +1,6 @@
+window.unload = function{
+alert("Welcome")
+}
 function run() {
   indata = document.getElementById("vin").value;
   outdata = btoa(indata);
