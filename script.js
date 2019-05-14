@@ -1,5 +1,5 @@
 window.unload = function{
-alert("Welcome")
+alert("Welcome");
 }
 function run() {
   indata = document.getElementById("vin").value;
