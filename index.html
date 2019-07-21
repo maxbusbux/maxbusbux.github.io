@@ -12,28 +12,37 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="script.js"></script>
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <h1>Base64 converter by maxbusbuxwr</h1>
-    <form onsubmit="press();return false" action="#">
-      <div class="form-group" onsubmit="press();return false" action="#">
-        <label for="b64in">Encode String</label>
-        <input type="text" class="form-control" id="vin" placeholder="Enter string">
-        <div class="form-group">
-          <label for="b64out">Ouput</label>
-          <input type="text" class="form-control" id="vout">
+  <div class="row">
+    <form class="col s6" onsubmit="return false">
+      <div class="row">
+        <div class="input-field col-s4">
+          <input placeholder="input" id="vin" type="text" class="validate" />
+          <label for="Input">Text to encode</label>
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="output" id="vout" type="text" class="validate"/ <label for="out">Output</label>
+        </div>
+        <div class="input-field col s3">
+          <button class="waves-effect  btn-small indigo lighten-5 black-text text-darken-2" onclick="press();" type="submit">Enocde!</button>
+          <button class="waves-effect  btn-small indigo lighten-5 black-text text-darken-2" onclick="reset();" type="submit">Reset</button>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary" onclick="press()">Encode!</button>
+
+
     </form>
   </div>
-  <script src="script.js"></script>
-  <script>
-    require('./render.js')
-  </script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
