@@ -35,19 +35,33 @@
           <button id="btn" class="waves-effect  btn-small indigo lighten-5 black-text text-darken-2" onclick="press();" type="submit">Enocde!</button>
           <button class="waves-effect  btn-small indigo lighten-5 black-text text-darken-2" onclick="reset();" type="submit" id="reset-btn"><i class="material-icons right">sync</i>Reset</button>
         </div>
+        <form class="col s6" onsubmit="return false">
+          <div class="row">
+            <div class="input-field col-s4">
+              <input placeholder="input" id="vin1" type="text" class="validate" />
+              <label for="Input">Text to Decode</label>
+            </div>
+            <div class="input-field col s4">
+              <input placeholder="output" id="vout2" type="text" class="validate"/ <label for="out">Output</label>
+            </div>
+            <div class="input-field col s3">
+              <button id="btn2" class="waves-effect  btn-small indigo lighten-5 black-text text-darken-2" onclick="press1();" type="submit">Decode!</button>
+              <button class="waves-effect  btn-small indigo lighten-5 black-text text-darken-2" onclick="reset1();" type="submit" id="reset-btn2"><i class="material-icons right">sync</i>Reset</button>
+            </div>
+
+          </div>
+
+
+        </form>
       </div>
-
-
-    </form>
-  </div>
-  <style>
-    #reset {
-      margin-left: 15px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-  </style>
-  <!-- Connect jquery
+      <style>
+        #reset-btn,#reset-btn2 {
+          margin-left: 15px;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+      </style>
+      <!-- Connect jquery
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>
   </script>
